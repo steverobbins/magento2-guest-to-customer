@@ -14,4 +14,8 @@
         <observer name="magepal_guest_to_customer_sales_order_place_after"
                   instance="MagePal\GuestToCustomer\Observer\SalesOrderPlaceAfterObserver" />
     </event>
+    <event name="customer_register_success">
+        <observer name="magepal_guest_to_customer_customer_register_success"
+                  instance="MagePal\GuestToCustomer\Observer\CustomerRegisterSuccessObserver" />
+    </event>
 </config>

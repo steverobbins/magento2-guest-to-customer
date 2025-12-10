@@ -23,6 +23,7 @@ class Data extends AbstractHelper
     const XML_PATH_ACTIVE = 'guesttocustomer/general/active';
     const XML_CUSTOMER_DASHBOARD = 'guesttocustomer/general/customer_dashboard';
     const XML_CUSTOMER_ALREADY_EXISTS = 'guesttocustomer/general/merge_customer_already_exists';
+    const XML_CUSTOMER_CREATE = 'guesttocustomer/general/merge_customer_create';
 
     const XML_MERGE_CUSTOMER_GROUP = 'guesttocustomer/merge/group';
     const XML_MERGE_CUSTOMER_NAME = 'guesttocustomer/merge/name';
@@ -67,6 +68,15 @@ class Data extends AbstractHelper
     public function isMergeIfCustomerAlreadyExists()
     {
         return $this->isConfigEnabled(self::XML_CUSTOMER_ALREADY_EXISTS);
+    }
+
+    /**
+     * Automatically add orders to a new customer when they create an account
+     * @return bool
+     */
+    public function isMergeIfCustomerCreate()
+    {
+        return $this->isConfigEnabled(self::XML_CUSTOMER_CREATE);
     }
 
     /**

@@ -53,6 +53,11 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Automatically add order to existing customer with same email address.</comment>
                 </field>
+                <field id="merge_customer_create" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Convert on account creation</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Automatically add matching guest orders when the customer creates an account.</comment>
+                </field>
             </group>
             <group id="merge" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Merge Customer Details</label>
